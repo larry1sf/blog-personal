@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[®Pagina Oficial Moncada Models™] Restaurante Pequeño Limon</title>
+    <meta name="description" content="restaurante de pequeño limon para comprar todo lo necesario acerca del limon">
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
+        rel="stylesheet">
+    <!--  -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- primera fila -->
+        <div class="row mb-1 gx-1">
+
+            <div class="col-12 text-center p-2 pb-0  mt-0">
+                <h1 class="fs-1 pb-0 mb-0 londrina-black">Blog Del Negro</h1>
+            </div>
+
+            <div class="col-12 col-md-10  g-0">
+                <p id="primer-p" class="fs-4 mb-0 londrina-light">
+                    Un breve
+                    resumen de
+                    las cosas
+                    que
+                    me
+                    gusta hacer
+                    o en
+                    las que gasto
+                    mi tiempo para
+                    saber que puedo hacer y como mejorar para optimizar mi tiempo (una mini agenda personal)
+                </p>
+            </div>
+
+
+        </div>
+        <!-- segunda fila -->
+        <div class="row gx-0 mb-1">
+            <!-- cuadro de feche a pblicar -->
+            <div class="col-3  col-lg-2 col-xxl-2  text-center  badge text-bg-success ">
+                <div class="row  mx-auto py-0 ">
+                    <b class=" fs-6 fw-semibold text-wrap px-0 gy-3 gy-md-3 gy-lg-1  gy-xl-2">Fecha estimada App</b>
+                    <div class="row gx-0 px-0 justify-content-center">
+                        <span id="fecha"
+                            class="fw-bolder col-10 bagde bagde-dark text-bg-dark gy-4 gy-md-3  gy-lg-1 gy-xl-2 p-1 rounded">7/07/2024</span>
+                    </div>
+                </div>
+            </div>
+            <!-- nota de la app -->
+            <div class="col-9 col-lg-10 p-0">
+                <div id="alerta" class="fs-5 alert alert-dark mb-0 px-0 ms-1 h-100">
+                    <p class="mb-0 px-2"> Tener cuenta para seleccionar las actividades que ya se allan realizado en el
+                        dia.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- tercera fila -->
+        <div class="row gx-1">
+
+            <!-- parte izquierda -->
+            <div class="col-xxl-8 col-xl-8 col-lg-8 col-12">
+
+                <div id="izquierda" class="col-12 table-responsive border-0 p-0  rounded mb-1">
+                    <!-- tabla -->
+                    <table class="table table-sm table-dark table-hover text-center align-middle fs-6 mb-0">
+
+                        <thead>
+                            <tr>
+                                <th>N°</th>
+                                <th>Actividad</th>
+                                <th>Hora de registro</th>
+                                <th>Hora de finalizacion</th>
+                                <th>Checkeo</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+
+                                <th scope="row">
+                                    1 <!-- numero dinamico. -->
+                                </th>
+
+                                <td>
+                                    <label for="actividad" class="form-label">
+                                        <input type="text" name="recibir nombre" class="p-1 form-control" id="actividad"
+                                            placeholder="Actividad">
+                                    </label>
+                                </td>
+
+                                <td>
+                                    <label for="Hora-registro" class="form-label">
+                                        <input type="time" title="hora de registro" name="hora-registro"
+                                            class="p-1 form-control" id="hora-registro">
+                                    </label>
+                                </td>
+
+                                <td>
+                                    <label for="Hora-finalizacion" class="form-label">
+                                        <input type="time" title="hora de finalizacion" placeholder="00/00"
+                                            name="hora-finalizacion" class="p-1 form-control" id="hora-finalizacion">
+                                    </label>
+                                </td>
+
+                                <td class="pe-0">
+                                    <div class="form-check form-switch">
+                                        <label for="checkeo" title="checkeo" class="form-check-label ">
+                                            <input type="checkbox" role="switch" name="checkeo"
+                                                class=" form-check-input" id="checkeo">
+                                        </label>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+                <!-- fila debotones -->
+                <div class="col-12 g-0">
+                    <div class="row  g-0 p-1 gap-5 justify-content-center ">
+                        <!-- 1 -->
+                        <button type="submit" aria-label="boton para añadir otro registro"
+                            class="col-3 btn btn-success rounded-pill  fw-semibold text-capitalize">añadir
+                            registro</button>
+                        <!-- 2 -->
+                        <button type="submit" aria-label="boton de envio de datos"
+                            class="col-3 btn btn-dark rounded-pill fw-semibold text-capitalize ">envio
+                            de
+                            datos</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- parte derecha -->
+            <div class="col-12 col-lg-4 col-xl-4 col-xxl-4 ">
+                <!-- <h2> instrucciones</h2> -->
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Accordion Item #1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong> It is shown by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Accordion Item #2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                until the collapse plugin adds the appropriate classes that we use to style each
+                                element. These classes control the overall appearance, as well as the showing and hiding
+                                via CSS transitions. You can modify any of this with custom CSS or overriding our
+                                default variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button " type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Accordion Item #3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- 
+                <ul class="list-group list-group list-group-flush list rounded">
+                    <h2 class="fs-3 mb-0 text-center list-group-item list-group-item-dark">instrucciones</h2>
+                    <li class="list-group-item list-group-item-dark">
+                        <b class="fs-6">Confirmacion de seleccion</b>
+                        <p class="mb-1">Selecciona la hora de inicio y finalizacion de registro para almacenarlo en la
+                            base de datos.
+                        </p>
+                    </li>
+                    <li class="list-group-item list-group-item-dark">
+                        <b>Rellenar informe de finalizacion</b>
+                        <p class="mb-1">Debe marcar la casilla de "Realizado" para guardar la informacion y llevar una
+                            cuenta con el
+                            orden de los objetivos del dia.</p>
+                    </li>
+                    <li class="list-group-item list-group-item-dark">
+                        <b class="fs-6">Añadir registros</b>
+                        <p class="mb-1">Pulsar el boton "Añadir registro" para añadir una nueva fila a la tabla y poder
+                            rellenarla
+                            con la informacion deseada para su administracion.</p>
+                    </li>
+                    <li class="list-group-item list-group-item-dark">
+                        <b class="fs-6">Envio de datos</b>
+                        <p class="mb-1">El boton de "Enviar de datos" almacena los datos registrados en la tabla para
+                            poder
+                            observarlos en la pagina que se creara con la fecha estimada.</p>
+                    </li>
+                </ul> -->
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
