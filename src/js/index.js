@@ -1,17 +1,41 @@
 let contador = 0;
+
+let c = 0;
+const reformat_hors = (e = "") => {
+    let dif_hors = e.split(':');
+    let hors12 = parseInt(dif_hors[0]);
+    if (hors12 > 12) {
+        hors12 -= 12;
+        return `${hors12}:${dif_hors[1]} pm`;
+    }
+    return `${e} pm`;
+};
+
 const btn_add_log = document.getElementById('add-log');
 const table_body = document.getElementById('body-table');
 const btn_close_all = document.getElementById(`btn-close-all`);
+const btn_enviar = document.getElementById('form-logs').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const form_dt = new FormData(event.target);
+    const form = {};
+
+    form_dt.forEach((value, key) => {
+        if (key === 'hora-registro') { form[key] = reformat_hors(value); }
+        else if (key === 'hora-finalizacion') { form[key] = reformat_hors(value); }
+        else { form[key] = value; }
+
+    });
+
+    console.log(form);
+});
+// const conta = document.querySelectorAll('#body-table tr');
 
 function add_log() {
-    const conta = document.querySelectorAll('#body-table tr');
-
-    contador++;
-
+    contador = table_body.querySelectorAll('tr').length + 1;
 
     const linea = document.createElement('tr');
     linea.innerHTML = `
-     <tr>
+     
 
                                 <td class='ps-2'>
                                     <label for="actividad-${contador}" class="form-label">
@@ -48,7 +72,7 @@ function add_log() {
                                 </td>
                                 
 
-</tr>`;
+`;
     // console.log(linea);
     table_body.append(linea);
 
@@ -59,16 +83,16 @@ function add_log() {
     });
 
     const btn_close = document.querySelectorAll(`#body-table button`);
-    btn_close[contador - 1].addEventListener('click', () => {
-        linea.remove();
-        contador--;
+    btn_close.forEach((el) => {
+        el.addEventListener('click', () => {
+            linea.remove();
+            contador--;
+        });
     });
-    // console.log(contador);
     ;
-    // console.log(btn_close[contador - 1]);
 }
 
 
-
 btn_add_log.addEventListener('click', add_log);
+
 add_log();
