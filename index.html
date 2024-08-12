@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
         rel="stylesheet">
     <!--  -->
+    <meta name="robots" content="*">
+    <meta name="author" content="Larry ceballos">
+    <meta name="publisher" content="@sociados & Larrys">
+    <meta name="keywords" content="Blog ,negro ,agenda de cosas por hacer ,agenda virtual">
+
+    <link rel="canonical" href="index.html">
     <link rel="stylesheet" href="src/css/index.css">
     <link rel="stylesheet" href="bibliotecas/bootstrap/css/bootstrap.min.css">
 </head>
@@ -22,7 +28,7 @@
         <div class="row mb-1 gx-1">
 
             <div class="col-12 text-center p-2 pb-0  mt-0">
-                <p class="h1 fs-1 pb-0 mb-0 londrina-black">Blog Del Negro</p>
+                <h1 class=" fs-1 pb-0 mb-0 londrina-black">Blog Del Negro</h1>
             </div>
 
             <div class="col-12 col-md-10  g-0">
@@ -50,14 +56,15 @@
                     <b class=" fs-6 fw-semibold text-wrap px-0 gy-3 gy-md-3 gy-lg-1  gy-xl-2">Fecha estimada App</b>
                     <div class="row gx-0 px-0 justify-content-center">
                         <span id="fecha"
-                            class="fw-bolder col-10 bagde bagde-dark text-bg-dark gy-4 gy-md-3  gy-lg-1 gy-xl-2 p-1 rounded">7/07/2024</span>
+                            class="fw-bolder col-10 bagde bagde-dark text-bg-dark gy-4 gy-md-3  gy-lg-1 gy-xl-2 p-1 rounded">**/08/2024</span>
                     </div>
                 </div>
             </div>
             <!-- nota de la app -->
             <div class="col-9 col-lg-10 p-0">
                 <div id="alerta" class="fs-5 alert bg-dark-subtle mb-0 px-0 ms-1 h-100">
-                    <p class="mb-0 px-2"> Tener cuenta para seleccionar las actividades que ya se allan realizado en el
+                    <p class="mb-0 px-2 text-center"> Tener cuenta para seleccionar las actividades que ya se allan
+                        realizado en el
                         dia.
                     </p>
                 </div>
@@ -67,29 +74,28 @@
         <div class="row gx-1">
 
             <!-- parte izquierda -->
-            <div class="col-xxl-8 col-xl-8 col-lg-8 col-12 h-100">
+            <div class="col-xxl-8 col-xl-8 col-lg-8 col-12 pe-1">
+                <div class="row h-100 g-0">
+                    <div id="contenedor-table" class="col-12  g-0 user-select-none ">
+                        <form action="#busqueda" method="post" id="form-logs" class="position-relative h-100">
+                            <div id="izquierda" class="col-12 table-responsive border-0 p-0 h-100 rounded mb-1">
+                                <!-- tabla -->
+                                <table
+                                    class=" table table-sm table-dark table-hover text-center align-middle fs-6  mb-0">
 
-                <form action="#busqueda" method="post" id="form-logs">
-                    <div id="izquierda" class="col-12 table-responsive border-0 p-0  rounded mb-1">
-                        <!-- tabla -->
-                        <!-- text-center  -->
-                        <table class=" table table-sm table-dark table-hover text-center align-middle fs-6  mb-0">
+                                    <thead class="position-sticky z-1 top-0 w-100">
+                                        <tr>
+                                            <th class="col-3">Actividad</th>
+                                            <th class="col-3">Hora de registro</th>
+                                            <th class="col-3">Hora de finalizacion</th>
+                                            <th class="col-3">Checkeo</th>
+                                        </tr>
+                                    </thead>
 
-                            <thead>
-                                <tr>
-                                    <!-- <th class="p-2">N°</th> -->
-                                    <th class="col-3">Actividad</th>
-                                    <th class="col-3">Hora de registro</th>
-                                    <th class="col-3">Hora de finalizacion</th>
-                                    <th class="col-3">Checkeo</th>
-                                    <!-- <th> </th> -->
-                                </tr>
-                            </thead>
+                                    <tbody id="body-table">
 
-                            <tbody id="body-table" class="">
-
-                                <!-- fila uno -->
-                                <!-- <tr class="p-1">
+                                        <!-- fila uno -->
+                                        <!-- <tr class="p-1">
                                 
                                 
                                 <td>
@@ -129,56 +135,60 @@
                                 </td>
                                 
                             </tr> -->
-                                <input type="submit" value="enviar datos" id="send-data" class="d-none">
 
-                            </tbody>
+                                    </tbody>
 
-                        </table>
-                        <div class="col-12 text-center text-bg-dark">
-
-                            <button id="send-log" type="button" aria-label="boton de envio de datos"
-                                class="col-12 btn btn-dark fw-semibold text-capitalize">
-                                <label for="send-data" class="">envio
-                                    de
-                                    datos</label></button>
+                                </table>
+                                <div class="position-sticky bottom-0 col-12 text-center text-bg-dark rounded-bottom">
+                                    <div id="send-log" title="boton de envio de datos"
+                                        aria-label="boton de envio de datos" class="col-12 fw-semibold text-capitalize">
+                                        <input type="submit" value="enviar datos" id="send-data" class="d-none">
+                                        <label for="send-data"
+                                            class=" btn border-top-0 border-end-0 border-start-0 w-100">
+                                            envio de datos
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- fila debotones -->
+                    <div class="col-12 g-0">
+                        <div class="row  g-0 p-1 gap-5 justify-content-center ">
+                            <!-- 1 -->
+                            <button id="add-log" type="button" aria-label="boton para añadir otro registro"
+                                class="col-3 btn btn-success rounded-pill  fw-semibold text-capitalize">añadir
+                                registro</button>
+                            <!-- 2 -->
+                            <button id="btn-close-all" type="button"
+                                class="col-3 btn btn-dark col-3 rounded-pill text-light">
+                                <span class="fw-semibold">borrar todo</span>
+                            </button>
                         </div>
                     </div>
-                </form>
-                <!-- fila debotones -->
-                <div class="col-12 g-0">
-                    <div class="row  g-0 p-1 gap-5 justify-content-center ">
-                        <!-- 1 -->
-                        <button id="add-log" type="button" aria-label="boton para añadir otro registro"
-                            class="col-3 btn btn-success rounded-pill  fw-semibold text-capitalize">añadir
-                            registro</button>
-                        <!-- 2 -->
-                        <button id="btn-close-all" type="button"
-                            class="col-3 btn btn-dark col-3 rounded-pill text-light">
-                            <span class="fw-semibold">borrar todo</span>
-                        </button>
-                    </div>
                 </div>
+
 
             </div>
 
             <!-- parte derecha -->
-            <div class="row col-md-12 col-lg-4 col-xl-4 g-0 justify-content-center bg-dark-subtle rounded h-50">
-                <!-- <div class="col-12 "> -->
-                <p class="h2 text-center "> instrucciones</p>
+            <div class=" col-md-12 col-lg-4 col-xl-4 g-0 justify-content-center bg-dark-subtle rounded ">
+                <h2 class=" text-center "> instrucciones</h2>
 
-                <div class="accordion" id="accordionExample">
+                <div class="accordion " id="accordionExample">
                     <!--  -->
                     <div class="accordion-item">
-                        <p class="h3 accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        <p class=" accordion-header">
+                            <button class=" accordion-button  collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Confirmacion de seleccion
                             </button>
                         </p>
                         <div id="collapseOne" class="accordion-collapse collapse show"
                             data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Selecciona la actividad junto con la hora de inicio, finalizacion de registro y si se
+                            <div class="accordion-body h6">
+                                Selecciona la actividad junto con la hora de inicio, finalizacion de registro y si
+                                se
                                 realizo en el dia para
                                 almacenarlo en la
                                 base de datos web.
@@ -187,28 +197,28 @@
                     </div>
                     <!--  -->
                     <div class="accordion-item">
-                        <p class="h3 accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        <p class=" accordion-header">
+                            <button class=" accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Añadir registros
                             </button>
                         </p>
                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body h6">
                                 Pulsar el boton "Añadir registro" para añadir registro en la base de datos web.
                             </div>
                         </div>
                     </div>
                     <!--  -->
                     <div class="accordion-item">
-                        <p class="h3 accordion-header">
-                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        <p class=" accordion-header">
+                            <button type="button" class=" accordion-button collapsed" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Borrar registros
                             </button>
                         </p>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body h6">
                                 Pulsar el boton <b>"Borrar todo"</b> para eliminar toda la informacion de la tabla y
                                 reiniciar sus datos.
                                 Tambien existe la opcion de eliminar un solo registro dandole a la ✖
@@ -217,13 +227,13 @@
                     </div>
                     <!--  -->
                     <div class="accordion-item">
-                        <p class="h3 accordion-header">
-                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        <p class=" accordion-header">
+                            <button type="button" class=" accordion-button collapsed" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                 Envio de datos</button>
                         </p>
                         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body h6">
                                 El boton de "Enviar de datos" almacena los datos registrados en la tabla para
                                 poder
                                 observarlos en la pagina que se creara con la fecha estimada.
@@ -232,47 +242,15 @@
                     </div>
                     <!--  -->
                 </div>
-
-                <p class="h2 text-center"> Registros</p>
-                <div id="Body-logs">
-                    <p>log #1</p>
+                <div class="vstack gap-5">
+                    <h3 class=" text-center"> Registros</h3>
+                    <div id="body-logs " class="text-center">
+                        <strong>No tienes registros!</strong>
+                    </div>
                 </div>
 
-                <!-- </div> -->
             </div>
 
-
-
-
-
-            <!-- 
-                <ul class="list-group list-group list-group-flush list rounded">
-                    <h2 class="fs-3 mb-0 text-center list-group-item list-group-item-dark">instrucciones</h2>
-                    <li class="list-group-item list-group-item-dark">
-                        <b class="fs-6">Confirmacion de seleccion</b>
-                        <p class="mb-1">Selecciona la hora de inicio y finalizacion de registro para almacenarlo en la
-                            base de datos.
-                        </p>
-                    </li>
-                    <li class="list-group-item list-group-item-dark">
-                        <b>Rellenar informe de finalizacion</b>
-                        <p class="mb-1">Debe marcar la casilla de "Realizado" para guardar la informacion y llevar una
-                            cuenta con el
-                            orden de los objetivos del dia.</p>
-                    </li>
-                    <li class="list-group-item list-group-item-dark">
-                        <b class="fs-6">Añadir registros</b>
-                        <p class="mb-1">Pulsar el boton "Añadir registro" para añadir una nueva fila a la tabla y poder
-                            rellenarla
-                            con la informacion deseada para su administracion.</p>
-                    </li>
-                    <li class="list-group-item list-group-item-dark">
-                        <b class="fs-6">Envio de datos</b>
-                        <p class="mb-1">El boton de "Enviar de datos" almacena los datos registrados en la tabla para
-                            poder
-                            observarlos en la pagina que se creara con la fecha estimada.</p>
-                    </li>
-                </ul> -->
         </div>
 
 
