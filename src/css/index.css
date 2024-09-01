@@ -51,12 +51,22 @@ body {
   z-index: 1;
 }
 
+li {
+  &::marker {
+    color: #3498db;
+  }
+}
+
 #lugares.grid {
   display: grid;
   gap: 0 12%;
   grid-template-columns: minmax(50%, 1fr) minmax(50%, 1fr);
 
   > li {
+    a {
+      text-decoration: none;
+      color: var(--bg);
+    }
     /* background-color: red; */
 
     &:nth-child(2) {
