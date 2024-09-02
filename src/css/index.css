@@ -20,7 +20,7 @@ body {
   min-width: 344px;
 
   #bg {
-    background-image: url("./../../public/svg/bg-fondo.svg");
+    background-image: url("../../public/svg/bg-fondo.svg");
     background-size: cover;
     box-shadow: var(--sombra);
     position: relative;
