@@ -1,73 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+
 :root {
   --size: 5px;
   --s-em: 5em;
+  --color: #ffffff;
+  --c-marker: #1f316f;
   --bg: #212529;
   --bg-card: #cccccc;
+  --sombra: 0 0 10px var(--bg), inset 0 0 4px var(--bg-card);
+}
+
+* {
+  &::selection {
+    background: var(--color);
+    color: var(--bg);
+  }
 }
 body {
   min-width: 344px;
-}
 
-#bg {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(
-    45deg,
-    #3498db,
-    #2ecc71
-  ); /* Gradient background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Shadow for depth */
-  border-radius: 10px; /* Rounded corners */
-  position: relative;
-  overflow: auto;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.1) 1px,
-        transparent 1px
-      ),
-      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
-    pointer-events: none;
+  #bg {
+    background-image: url("./../../public/svg/bg-fondo.svg");
+    background-size: cover;
+    box-shadow: var(--sombra);
+    position: relative;
     z-index: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.1) 1px,
+          transparent 1px
+        ),
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container {
+      min-height: calc(100vh - 0.3px) !important;
+    }
   }
 }
 
-.bg {
-  background: linear-gradient(115deg, #ffffff, #dddddd);
-  border: calc(var(--size) - 4px) solid var(--bg-card);
-  box-shadow: 0 0 3px var(--bg), inset 0 0 40px var(--bg-card);
+.font,
+.font-b,
+.font-t {
+  font-family: "SUSE";
+  font-style: normal;
+  font-optical-sizing: auto;
+  color: var(--color) !important;
+}
+.font {
+  font-weight: 300;
+}
+.font-b {
+  font-weight: 600;
 }
 
-.container {
+.font-t {
+  font-weight: 800;
+}
+
+h1 {
+  letter-spacing: 0.2rem;
+  &::before {
+    content: "@";
+  }
+}
+.sub-bg {
+  box-shadow: var(--sombra);
+  background: linear-gradient(45deg, #2ecc708f, #3498dbd6);
+  background-size: 100% 150%;
   z-index: 1;
+  transition: 0.15s ease !important;
 }
 
-li {
-  &::marker {
-    color: #3498db;
+.scale {
+  scale: 0.5 1 !important;
+}
+.sub-bg.btn {
+  border: 0px solid transparent;
+
+  &:hover {
+    box-shadow: var(--sombra), var(--sombra);
+    scale: 101%;
+    transition: 0.1s ease-in !important;
+
+    .btn-f {
+      span {
+        color: var(--bg-card) !important;
+        transition: 0s;
+      }
+    }
+  }
+  &:visited {
+    span {
+      color: aqua;
+    }
   }
 }
 
-#lugares.grid {
+#lugares {
   display: grid;
   gap: 0 12%;
   grid-template-columns: minmax(50%, 1fr) minmax(50%, 1fr);
+  position: relative;
+  left: 10px;
 
   > li {
-    a {
-      text-decoration: none;
-      color: var(--bg);
+    &::marker {
+      font-family: "SUSE";
+      font-weight: 300;
+      color: var(--c-marker);
     }
-    /* background-color: red; */
+    a {
+      font-family: "SUSE";
+      font-weight: 300;
+      text-decoration: none;
+      color: var(--color);
+      transition: 0.1s;
+
+      &:hover {
+        color: var(--bg);
+        transition: 0.3s;
+      }
+
+      &:visited {
+        color: aqua;
+      }
+    }
 
     &:nth-child(2) {
       grid-area: 2/1;
@@ -91,7 +157,7 @@ li {
   }
 }
 
-@media (0px <= width <=573px) {
+@media (0px <= width <= 573px) {
   @media (0px <= width <= 510px) {
     #artistas {
       > li {
