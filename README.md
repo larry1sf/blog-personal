@@ -3,7 +3,7 @@
  
 ## Datos
 - 💻 **Desarrollador:** _larry_
-- 🦄 **Mi red social:** [_Aqui_](#)
+- 🦄 **Mi red social:** [Aqui]([#](https://larry1sf.github.io/))
 _ 📄 **Frameworks:** _Bootstrap5_
 - 💭 **Frase animadora:** _¡De tanto intentar aprendes!_
 
