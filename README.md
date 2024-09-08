@@ -1,5 +1,5 @@
 # Blog de curso de introduccion a frontend-Larry
-🌐**Link para acceder al blog**: *[Aqui](https://github.com/larry1sf/blog-personal)*
+🌐**Link para acceder al blog**: *[Aqui](https://larry1sf.github.io/blog-personal/)*
  
 ## Datos
 - 💻 **Desarrollador:** _larry_
