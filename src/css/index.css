@@ -26,11 +26,6 @@
 body {
   min-width: 344px;
 
-  ol,
-  ul {
-    padding-left: 1rem !important;
-  }
-
   #bg {
     background-image: url("../../public/img/bg-fondo.webp");
     background-size: cover;
@@ -115,7 +110,6 @@ h1 {
   display: grid;
   gap: 0 12%;
   grid-template-columns: minmax(50%, 1fr) minmax(50%, 1fr);
-  justify-items: center;
   height: 90%;
   /* transform: translate(1.5rem, 0); */
 
