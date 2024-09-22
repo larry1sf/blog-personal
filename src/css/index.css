@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&display=swap');
 
 :root {
   --size: 5px;
@@ -10,7 +10,13 @@
   --sombra: 0 0 10px var(--bg), inset 0 0 4px var(--bg-card);
 }
 
+
 * {
+  font-family: "Josefin Sans", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+
   &::selection {
     background: var(--color);
     color: var(--bg);
@@ -50,22 +56,7 @@ body {
 .font,
 .font-b,
 .font-t {
-  font-family: "SUSE";
-  font-style: normal;
-  font-optical-sizing: auto;
   color: var(--color) !important;
-}
-
-.font {
-  font-weight: 300;
-}
-
-.font-b {
-  font-weight: 600;
-}
-
-.font-t {
-  font-weight: 800;
 }
 
 h1 {
@@ -120,13 +111,11 @@ h1 {
 
   >li {
     &::marker {
-      font-family: "SUSE";
       font-weight: 300;
       color: var(--c-marker);
     }
 
     a {
-      font-family: "SUSE";
       font-weight: 300;
       text-decoration: none;
       color: var(--color);
