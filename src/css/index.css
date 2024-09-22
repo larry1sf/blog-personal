@@ -21,8 +21,10 @@ body {
   min-width: 344px;
 
   #bg {
-    background-image: url("../../public/svg/bg-fondo.svg");
-    background-size: cover;
+    <<<<<<< HEAD background-image: url("../../public/svg/bg-fondo.svg");
+    =======<<<<<<< HEAD background-image: url("./../../public/img/bg-fondo.webp");
+    =======background-image: url("../../public/svg/bg-fondo.svg");
+    >>>>>>>5a38eb1cfc2202a348fb6436ad0b33e8d9178a91>>>>>>>218a68081979b26757841f495b354b52c6efebcb background-size: cover;
     box-shadow: var(--sombra);
     position: relative;
     z-index: 0;
