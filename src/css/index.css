@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&display=swap');
 
 :root {
   --size: 5px;
@@ -10,7 +10,13 @@
   --sombra: 0 0 10px var(--bg), inset 0 0 4px var(--bg-card);
 }
 
+
 * {
+  font-family: Calibri, 'Trebuchet MS', sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+
   &::selection {
     background: var(--color);
     color: var(--bg);
@@ -19,6 +25,11 @@
 
 body {
   min-width: 344px;
+
+  ol,
+  ul {
+    padding-left: 1rem !important;
+  }
 
   #bg {
     background-image: url("../../public/img/bg-fondo.webp");
@@ -47,29 +58,17 @@ body {
   }
 }
 
+
+
 .font,
-.font-b,
+.font-btn,
 .font-t {
-  font-family: "SUSE";
-  font-style: normal;
-  font-optical-sizing: auto;
   color: var(--color) !important;
-}
-
-.font {
-  font-weight: 300;
-}
-
-.font-b {
-  font-weight: 600;
-}
-
-.font-t {
-  font-weight: 800;
 }
 
 h1 {
   letter-spacing: 0.2rem;
+  font-size: 2.393rem !important;
 
   &::before {
     content: "@";
@@ -94,6 +93,7 @@ h1 {
   &:hover {
     box-shadow: var(--sombra), var(--sombra);
     scale: 101%;
+    filter: brightness(1.2) contrast(1.1);
     transition: 0.1s ease-in !important;
 
     .btn-f {
@@ -115,22 +115,21 @@ h1 {
   display: grid;
   gap: 0 12%;
   grid-template-columns: minmax(50%, 1fr) minmax(50%, 1fr);
-  position: relative;
-  left: 10px;
+  justify-items: center;
+  height: 90%;
+  /* transform: translate(1.5rem, 0); */
 
   >li {
     &::marker {
-      font-family: "SUSE";
       font-weight: 300;
       color: var(--c-marker);
     }
 
     a {
-      font-family: "SUSE";
-      font-weight: 300;
+      /* font-weight: 300; */
       text-decoration: none;
       color: var(--color);
-      transition: 0.1s;
+      transition: .1s;
 
       &:hover {
         color: var(--bg);
